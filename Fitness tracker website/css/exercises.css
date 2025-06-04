@@ -1,0 +1,271 @@
+/* Exercises Page Styles */
+.exercises-header {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    padding: var(--spacing-8) 0 var(--spacing-4);
+}
+
+.exercises-header h1 {
+    margin-bottom: var(--spacing-2);
+    font-weight: 700;
+}
+
+.exercises-header p {
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Category Tabs */
+.category-tabs {
+    margin-bottom: var(--spacing-6);
+    overflow-x: auto;
+}
+
+.tabs-container {
+    display: flex;
+    min-width: min-content;
+}
+
+.category-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-3) var(--spacing-4);
+    margin-right: var(--spacing-2);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    border: 2px solid transparent;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all var(--transition-fast) ease-in-out;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+.category-tab:last-child {
+    margin-right: 0;
+}
+
+.category-tab i {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-2);
+    color: var(--color-text-light);
+    transition: color var(--transition-fast) ease-in-out;
+}
+
+.category-tab:hover {
+    background-color: var(--color-background-alt);
+    text-decoration: none;
+}
+
+.category-tab.active {
+    border-color: var(--color-primary);
+    background-color: rgba(67, 97, 238, 0.05);
+}
+
+.category-tab.active i {
+    color: var(--color-primary);
+}
+
+/* Exercise Grid */
+.exercises-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
+}
+
+.exercise-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal) ease-in-out, box-shadow var(--transition-normal) ease-in-out;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.exercise-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.exercise-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal) ease-in-out;
+}
+
+.exercise-card:hover .exercise-image img {
+    transform: scale(1.05);
+}
+
+.exercise-info {
+    padding: var(--spacing-4);
+}
+
+.exercise-info h3 {
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+}
+
+.exercise-info p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-4);
+}
+
+/* Exercise Modal */
+#exercise-modal .modal-content {
+    max-width: 700px;
+}
+
+#modal-exercise-name {
+    text-align: center;
+    margin-bottom: var(--spacing-4);
+    font-weight: 700;
+}
+
+.exercise-visual {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-4);
+}
+
+.exercise-visual img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-4);
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer {
+    font-size: var(--font-size-5xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    padding: var(--spacing-4) var(--spacing-6);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--radius-full);
+    min-width: 120px;
+    text-align: center;
+}
+
+.timer-controls {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+#modal-exercise-description {
+    margin-bottom: var(--spacing-6);
+    color: var(--color-text-light);
+}
+
+.exercise-complete-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* Workout Tips */
+.workout-tips {
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-8);
+}
+
+.workout-tips h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    font-weight: 700;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+}
+
+.tip-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-normal) ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card i {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.tip-card h3 {
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+}
+
+.tip-card p {
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .exercises-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tips-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .exercise-visual {
+        flex-direction: row;
+        gap: var(--spacing-4);
+        align-items: center;
+    }
+    
+    .exercise-visual img {
+        width: 60%;
+        margin-bottom: 0;
+    }
+    
+    .timer-container {
+        width: 40%;
+    }
+}
+
+@media (min-width: 768px) {
+    .category-tab {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .category-tab i {
+        margin-bottom: 0;
+        margin-right: var(--spacing-2);
+    }
+    
+    .exercises-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .tips-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

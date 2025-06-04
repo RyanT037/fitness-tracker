@@ -1,0 +1,256 @@
+/* BMI Calculator Styles */
+.bmi-section {
+    padding: var(--spacing-8) 0;
+}
+
+.bmi-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bmi-form-container {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.bmi-form-container h1 {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+.bmi-form-container p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-6);
+}
+
+.bmi-form .form-group {
+    margin-bottom: var(--spacing-4);
+}
+
+.bmi-form label {
+    display: block;
+    margin-bottom: var(--spacing-2);
+    font-weight: 500;
+}
+
+.height-input-group {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.height-input-group input {
+    flex: 1;
+}
+
+.height-input-group select {
+    width: 80px;
+}
+
+.bmi-form .btn {
+    margin-top: var(--spacing-2);
+}
+
+/* BMI Result */
+.bmi-result {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.bmi-result h2 {
+    margin-bottom: var(--spacing-4);
+    font-weight: 700;
+}
+
+.bmi-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-4);
+    margin-bottom: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    color: var(--color-white);
+}
+
+.bmi-score.underweight {
+    background-color: var(--color-warning);
+}
+
+.bmi-score.normal {
+    background-color: var(--color-success);
+}
+
+.bmi-score.overweight {
+    background-color: var(--color-warning);
+}
+
+.bmi-score.obese {
+    background-color: var(--color-error);
+}
+
+.bmi-value {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--spacing-1);
+}
+
+.bmi-category {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.bmi-interpretation {
+    margin-bottom: var(--spacing-6);
+}
+
+.bmi-interpretation h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+}
+
+.bmi-interpretation p {
+    color: var(--color-text-light);
+}
+
+.bmi-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+/* BMI Information */
+.bmi-info {
+    margin-top: var(--spacing-8);
+}
+
+.bmi-info h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-6);
+    font-weight: 700;
+}
+
+.bmi-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-8);
+}
+
+.bmi-category-card {
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    color: var(--color-white);
+    transition: transform var(--transition-normal) ease-in-out;
+}
+
+.bmi-category-card:hover {
+    transform: translateY(-5px);
+}
+
+.bmi-category-card.underweight {
+    background-color: var(--color-warning);
+}
+
+.bmi-category-card.normal {
+    background-color: var(--color-success);
+}
+
+.bmi-category-card.overweight {
+    background-color: var(--color-warning);
+}
+
+.bmi-category-card.obese {
+    background-color: var(--color-error);
+}
+
+.bmi-category-card h3 {
+    margin-bottom: var(--spacing-1);
+    font-weight: 600;
+}
+
+.bmi-category-card p {
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.bmi-limitations {
+    background-color: var(--color-white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.bmi-limitations h3 {
+    margin-bottom: var(--spacing-3);
+    font-weight: 600;
+}
+
+.bmi-limitations p {
+    margin-bottom: var(--spacing-3);
+    color: var(--color-text-light);
+}
+
+.bmi-limitations ul {
+    margin-bottom: var(--spacing-4);
+    padding-left: var(--spacing-6);
+}
+
+.bmi-limitations li {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-text-light);
+}
+
+.message {
+    padding: var(--spacing-3) var(--spacing-4);
+    margin-top: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    font-weight: 500;
+}
+
+.message.success {
+    background-color: rgba(72, 199, 142, 0.1);
+    color: var(--color-success-dark);
+    border: 1px solid var(--color-success);
+}
+
+.message.error {
+    background-color: rgba(255, 56, 96, 0.1);
+    color: var(--color-error-dark);
+    border: 1px solid var(--color-error);
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .bmi-actions {
+        flex-direction: row;
+    }
+    
+    .bmi-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .bmi-container {
+        flex-direction: row;
+    }
+    
+    .bmi-form-container, .bmi-result {
+        flex: 1;
+    }
+    
+    .bmi-categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
